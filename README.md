@@ -26,7 +26,7 @@ XML, POS-tagged corpus. Note that [**PyLT3**](https://github.com/BramVanroy/PyLT
 # SONAR components contents
 | Corpus   | Contents   | # sentences |
 | :------- | :--------- | ----------: |
-| WR-P-E-A | Discussion lists	4,395,094 |
+| WR-P-E-A | Discussion lists | 4,395,094 |
 | WR-P-E-C | E-magazines | 551,119 |
 | WR-P-E-E | Newsletters | 115 |
 | WR-P-E-F | Press releases | 18,372 |
@@ -51,4 +51,4 @@ XML, POS-tagged corpus. Note that [**PyLT3**](https://github.com/BramVanroy/PyLT
 | WR-U-E-E | Written assignments | 23,488 |
 | WS-U-E-A | Auto cues | 2,163,521 |
 | WS-U-T-B | Texts for the visually impaired | 44,862 |
-| **SoNaR** treebank | **Complete treebank** | **41,258,769** |
+| **SoNaR treebank** | **Complete treebank** | **41,258,769** |
