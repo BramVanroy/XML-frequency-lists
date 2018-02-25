@@ -1,28 +1,28 @@
 # SONAR frequency lists
- - Sorted per component (cf. [component contents below](#SONAR-components-contents))
+ - Sorted per component (cf. [component contents below](#sonar-components-contents))
  - Every component dir has two sub directories:
-   - `with_pos/`: the POS tag of each keyword is included. This means that there is a distinction between homographs as 
+   - `with_pos/`: the POS tag of each keyword is included. This means that there is a distinction between homographs as
    long as they have different POS tags. The result is a frequency list with format `{token}\t{pos}\t{count}`
-   - `without_pos/`: the POS tag is not included. This means that there is **no** distinction between homographs. The 
+   - `without_pos/`: the POS tag is not included. This means that there is **no** distinction between homographs. The
    result is a frequency list with format `{token}\t{count}`
- - A file's name describes its content, format: 
+ - A file's name describes its content, format:
  `{component}[-withpos][-contentonly]-attr[-rmonlynonans][-rmonlydigits].freqs`:
    - `component`: the SONAR component
    - `-withpos`: whether or not POS tags are included (cf. supra)
-   - `-contentonly`: only content words are included, i.e. POS (`pt` for SONAR) of nouns (`n`), adjectives (`adj`), 
+   - `-contentonly`: only content words are included, i.e. POS (`pt` for SONAR) of nouns (`n`), adjectives (`adj`),
    adverbs (`bw`), and verbs (`ww`). Other word classes are discarded
-   - `attr`: the most important: which XML attribute was used to gather frequencies from. E.g. in SONAR, for tokens 
+   - `attr`: the most important: which XML attribute was used to gather frequencies from. E.g. in SONAR, for tokens
    `word`, for lemmata `lemma`
    - `-rmonlynonans`: all tokens that only consist of non-alphanumeric characters have been removed from the list
-   - `-rmonlydigits`: all tokens that only consist of digits have been removed from the list (note: tokens such as 
+   - `-rmonlydigits`: all tokens that only consist of digits have been removed from the list (note: tokens such as
    `1,23` or `-3` are thus *not* removed, as it contains a non-digit character.)
- 
- 
+
+
 # Build your own frequency lists
-Attached script `xml_attrval_frequencies` serves as a great starting point to build your own frequency list from any 
+Attached script `xml_attrval_frequencies` serves as a great starting point to build your own frequency list from any
 XML, POS-tagged corpus. Note that [**PyLT3**](https://github.com/BramVanroy/PyLT3) is required to run that script.   
- 
- 
+
+
 # SONAR components contents
 | Corpus   | Contents   | # sentences |
 | :------- | :--------- | ----------: |
