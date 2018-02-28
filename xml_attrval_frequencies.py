@@ -1,8 +1,8 @@
 from pathlib import Path
 
-from PyLT3.XmlHelpers import get_attr_frequencies
-from PyLT3.FileHelpers import scan_dir_and_execute, print_tuplelist
-from PyLT3.TypeHelpers import sort_simple_dict, clean_simple_dict
+from pylt3.xml_helpers import get_attr_frequencies
+from pylt3.file_helpers import scan_dir_and_execute, print_tuplelist
+from pylt3.type_helpers import sort_simple_dict, clean_simple_dict
 
 """
 usage: xml_tag_frequencies.py [-h] [-c] [-p] input_dir tag attr
@@ -71,7 +71,7 @@ def get_all_freqlists(input_file, xml_tag, xml_attr, content_only, include_pos):
                     base / f"{component}{withposstr}{contentstr}-{xml_attr}-rmonlynonans-rmonlydigits.freqs",
                     encoding='utf-8')
 
-    print(f"{corpus}: done!")
+    print(f"{component}: done!")
 
     return None
 
