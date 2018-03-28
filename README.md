@@ -1,5 +1,8 @@
 # SONAR frequency lists
  - Sorted per component (cf. [component contents below](#sonar-components-contents))
+ - WRPEL, WRUEA, WRUED _not_ included because there are some issues with parsing. These components contain new media
+ data so it is no surprise that Alpino has issues with parsing them. Because of inconsistent parsing, I did not provide
+ frequency lists for these components.
  - Every component dir has two sub directories:
    - `with_pos/`: the POS tag of each keyword is included. This means that there is a distinction between homographs as
    long as they have different POS tags. The result is a frequency list with format `{token}\t{pos}\t{count}`
@@ -16,6 +19,11 @@
    - `-rmonlynonans`: all tokens that only consist of non-alphanumeric characters have been removed from the list
    - `-rmonlydigits`: all tokens that only consist of digits have been removed from the list (note: tokens such as
    `1,23` or `-3` are thus *not* removed, as it contains a non-digit character.)
+ - It is important to note that it is not necessarily the case that there is an equal amount of lemmas and words. This
+ sounds counter-intuitive, but an analysis of the data shows that in a few cases only token attributes were added and
+ not lemmas. It is not clear to me why this is the case. For each component that has these missing lemmas, a file is
+ given where a token (not lower-cased or normalised in any way) is given followed by the times it occurs without a
+ lemma attribute in said component.
 
 
 # Build your own frequency lists
